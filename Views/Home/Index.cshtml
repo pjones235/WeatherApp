@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "WeatherApp";
+}
+
+<div class="row">
+    <div class="col">
+        <h2>Find weather in your area</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <h6>Enter your zipcode</h6>
+    </div>
+    
+</div>
+<div class="row">
+    <div class="col-lg-6 col-md-8 col-sm-10 col-12">
+        <div class="row">
+            <div class="col-md-6 col-12 my-md-0 my-2">
+                <input id="zipcode" name="zipcode" class="form-control" placeholder="E.g. 49503" value="">
+            </div>
+            <div class="col-md-6 col-12 my-md-0 my-2">
+                <a href="#" class="btn btn-primary" onclick="getWeather()">Get Weather</a>
+            </div>
+        </div>
+        <div class="row my-2 d-none" id="errorNotice">
+            <div class="col-12 text-danger">
+                Zipcode invalid. Please enter a valid U.S. zipcode.
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="col-12 px-0 my-4 d-none" id="weatherTable">
+        <h4 id="cityName" class="font-weight-light"></h4>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr><th colspan='1'>Date</th><th colspan='1'>Temperature</th><th colspan='1'>Pressure</th></tr>
+            </thead>
+            <tbody>
+                <tr class="d-none"></tr>
+            </tbody>
+        </table>
+    </div>
